@@ -1,3 +1,104 @@
+
 <h1>Felipe Maturana</h1>
 <h1>Pages#x</h1>
-<p>Find me in app/views/pages/x.html.erb</p>
+
+<h3> <%= params %> </h3>
+
+<%= form_tag(action: "new_user") do %>
+	<div>	
+		<%= label_tag :nombre, "Nombre" %>
+		<%= text_field_tag :nombre %>
+	</div>
+	<div>	
+		<%= label_tag :email, "Email" %>
+		<%= text_field_tag :email %>
+	</div>
+	<div>	
+		<%= label_tag :edad, "Edad" %>
+		<%= number_field_tag :edad %>
+	</div>
+
+
+	<div>
+		<%= submit_tag "Enviar", :id => "submit", :name => "submit", :class => "form_submit", :disabled => false, :disable_with => "Please wait..." %>
+	</div>
+<% end %>
+
+<ul>
+
+<hr>
+
+<% @users.each do |user| %>
+	<li>
+		<%= user.nombre %>	
+	</li>
+<% end %>
+
+</ul>
+
+<%= image_tag "evidencia-taller2.png" %>
+
+<!-- div class="container">
+        <div class="row centered-form">
+        <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+        	<div class="panel panel-default">
+        		<div class="panel-heading">
+			    		<h3 class="panel-title">Registrate <small>It's free!</small></h3>
+			 			</div>
+			 			<div class="panel-body">
+			    		<form role="form">
+			    			<div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			                <input type="text" name="first_name" id="first_name" class="form-control input-sm" placeholder="First Name">
+			    					</div>
+			    				</div>
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<input type="text" name="last_name" id="last_name" class="form-control input-sm" placeholder="Last Name">
+			    					</div>
+			    				</div>
+			    			</div>
+
+			    			<div class="form-group">
+			    				<input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address">
+			    			</div>
+
+			    			<div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password">
+			    					</div>
+			    				</div>
+
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Confirm Password">
+			    					</div>
+			    				</div>
+			    			</div>
+			    			
+			    			
+
+							<div class="row">
+		    					<div class="col-xs-2 col-sm-2 col-md-2">
+		    						<p>Age: </p>
+		    					</div>
+								
+								<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+									<input type="number" name="age" value ="0">	
+			    					</div>
+		    					</div>
+
+							</div>
+
+							
+			    			<input type="submit" value="Register" class="btn btn-info btn-block">
+			    		
+			    		</form>
+			    	</div>
+	    		</div>
+    		</div>
+    	</div>
+    </div> -->
